@@ -99,3 +99,31 @@ function loadQuestion() {
 // Load the first question
 loadQuestion();
 }
+// Define the function to end the quiz
+function endQuiz() {
+    // Hide the question screen and show the end screen
+    document.getElementById("questions").classList.add("hide");
+    document.getElementById("end-screen").classList.remove("hide");
+    
+    // Display the final score
+    document.getElementById("final-score").textContent = score;
+    }
+    
+    // Attach the startQuiz function to the start button
+    document.getElementById("start").addEventListener("click", startQuiz);
+
+    // Save the user's initials and score
+document.getElementById("submit").addEventListener("click", function() {
+    const initialsInput = document.getElementById("initials");
+    const initials = initialsInput.value.trim();
+    if (initials) {
+      const highScores = JSON.parse(localStorage.getItem("highscores") || "[]");
+      highScores.push({ initials, score });
+      localStorage.setItem("highscores", JSON.stringify(highScores));
+      initialsInput.value = "";
+      window.location.href = "highscores.html";
+    }
+  });
+  
+
+    
