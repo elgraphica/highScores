@@ -20,3 +20,5 @@ HAVE FUN !
 ![Screenshot](imgs/Screenshot%202023-02-21%20at%2017.18.14%20(2).png)
 
 # Link to Deployed Application on GitHub
+
+https://elgraphica.github.io/highScores/index.html
